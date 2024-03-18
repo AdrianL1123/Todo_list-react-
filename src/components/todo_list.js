@@ -2,9 +2,9 @@ import Todo_item from "./todo_item";
 import Add_new_form from "./add_new_form";
 export default function Todo_list() {
   const todos = [
-    { id: 1, text: "Task first" },
-    { id: 2, text: "Task second" },
-    { id: 3, text: "Task third" },
+    { id: 1, text: "Task 1" },
+    { id: 2, text: "Task 2" },
+    { id: 3, text: "Task 3" },
   ];
   return (
     <div
@@ -16,7 +16,7 @@ export default function Todo_list() {
         <ul className="list-group">
           {todos.map((todo, index) => {
             const { text, id } = todo;
-            return <Todo_item key={id} text={text} num={index + 1} />;
+            return <Todo_item key={id} text={text} />;
           })}
         </ul>
         <Add_new_form />
