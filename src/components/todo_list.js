@@ -1,6 +1,6 @@
-import Todo_item from "./todo_item";
-import Add_new_form from "./add_new_form";
-export default function Todo_list() {
+import TodoItem from "./todo_item";
+
+export default function TodoList() {
   const todos = [
     {
       id: 1,
@@ -20,20 +20,17 @@ export default function Todo_list() {
   ];
 
   return (
-    <div
-      className="card rounded shadow-sm"
-      style={{ maxWidth: "500px", margin: "60px auto" }}
-    >
-      <div className="card-body">
-        <h3 className="card-title mb-3">My Todo List</h3>
-        <ul className="list-group">
-          {todos.map((todo, index) => {
-            const { text, id } = todo;
-            return <Todo_item key={id} text={text} />;
-          })}
-        </ul>
-        <Add_new_form />
-      </div>
-    </div>
+    <ul className="list-group">
+      {todos.map((todo) => {
+        return (
+          <TodoItem
+            key={todo.id}
+            // text={todo.text}
+            // isCompleted={todo.isCompleted}
+            {...todo}
+          />
+        );
+      })}
+    </ul>
   );
 }
