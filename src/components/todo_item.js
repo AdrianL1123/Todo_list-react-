@@ -1,5 +1,5 @@
 export default function Todo_item(props) {
-  const { taskName, num } = props;
+  const { text, num } = props;
   return (
     <li className="list-group-item d-flex justify-content-between align-items-center">
       <div>
@@ -7,7 +7,7 @@ export default function Todo_item(props) {
           <i className="bi bi-square"></i>
         </button>
         <span className="ms-2">
-          {taskName} {num}
+          {text} {num}
         </span>
       </div>
       <div>

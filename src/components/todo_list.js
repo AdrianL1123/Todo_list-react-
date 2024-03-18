@@ -1,10 +1,10 @@
 import Todo_item from "./todo_item";
 import Add_new_form from "./add_new_form";
 export default function Todo_list() {
-  const tasks = [
-    { id: 1, taskName: "Task something" },
-    { id: 2, taskName: "Task anything" },
-    { id: 3, taskName: "Task this" },
+  const todos = [
+    { id: 1, text: "Task first" },
+    { id: 2, text: "Task second" },
+    { id: 3, text: "Task third" },
   ];
   return (
     <div
@@ -14,9 +14,9 @@ export default function Todo_list() {
       <div className="card-body">
         <h3 className="card-title mb-3">My Todo List</h3>
         <ul className="list-group">
-          {tasks.map((task, index) => {
-            const { taskName, id } = task;
-            return <Todo_item key={id} taskName={taskName} num={index + 1} />;
+          {todos.map((todo, index) => {
+            const { text, id } = todo;
+            return <Todo_item key={id} text={text} num={index + 1} />;
           })}
         </ul>
         <Add_new_form />
