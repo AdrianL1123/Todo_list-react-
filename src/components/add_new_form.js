@@ -11,7 +11,7 @@ export default function AddTodoForm(props) {
           e.preventDefault();
           setTodos([
             ...todos,
-            { id: Math.random(), text: value, isCompleted: true },
+            { id: Math.random(), text: value, isCompleted: false },
           ]);
           setValue("");
         }}
