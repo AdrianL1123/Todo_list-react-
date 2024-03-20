@@ -12,13 +12,11 @@ export default function TodoList(props) {
             id={id}
             text={text}
             isCompleted={isCompleted}
-            
-            // onCheck={(id) => {
-            //   const newtodos = todos.find((t) => t.id === id);
-            //   newtodos.isCompleted = !newtodos.isCompleted;
-            //   setTodos([...todos]);
-            //   console.log("todos", todos);
-            // }}
+            onCheck={(id) => {
+              const newtodos = todos.find((t) => t.id === id);
+              newtodos.isCompleted = !newtodos.isCompleted;
+              setTodos([...todos]);
+            }}
             onDelete={(id) => {
               setTodos(todos.filter((t) => t.id !== id));
             }}

@@ -5,7 +5,6 @@ export default function TodoItem(props) {
       <div>
         {/* condition rendering */}
         {/*//* ? = if : = else */}
-        
         {isCompleted ? (
           //* empty div if you are lazy to type
           <>
